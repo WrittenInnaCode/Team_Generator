@@ -1,5 +1,8 @@
 // Dependencies
 const inquirer = require('inquirer');
+const fs = require('fs');
+
+const generateHTML = require ('./src/generateHTML')
 
 // Constructors
 const Manager = require('./lib/Manager');
@@ -136,7 +139,7 @@ function createTeam() {
                     createEngineer();
                     break;
                 default:
-                    //generateHTML();
+                    fs.writeFileSync('./dist/team.html', generateHTML({ managers, engineers, interns }));
                     return;
             }
         });

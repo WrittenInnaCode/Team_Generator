@@ -8,7 +8,7 @@ class Employee {
     }
 
     getName() {
-        return this.Name;
+        return this.name;
     }
     
     getId() {
