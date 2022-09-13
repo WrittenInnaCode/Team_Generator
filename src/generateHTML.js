@@ -38,19 +38,19 @@ const generateHTML = team => {
 const generateTeam = team => {
     let html = '';
 
-    team.managers.forEach(function(manager){
+    team.managers.forEach(function (manager) {
         html += `
-        <article class="col-md-4 pb-4">
+    <article class="col-md-4">
     <div id="card">
       <div class="card bg-light">
         <div class="card-header p-2 bg-primary text-white">
-          <h5>${manager.getName()}</h5>
-          <h6><i class="fas fa-mug-hot"></i> Manager</h6>
+          <h4>${manager.getName()}</h4>
+          <h5><i class="fas fa-mug-hot"></i> Manager</h5>
         </div>
         <div class="card bg-light m-3">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${manager.getId()}</li>
-            <li class="list-group-item">Email: ${manager.getEmail()}</li>
+            <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
             <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
           </ul>
         </div>
@@ -58,44 +58,44 @@ const generateTeam = team => {
     </div>
   </article>
         `;
-});
+    });
 
-team.engineers.forEach(function(engineer){
-    html += `
+    team.engineers.forEach(function (engineer) {
+        html += `
     <article class="col-md-4">
         <div id="card">
           <div class="card bg-light">
             <div class="card-header p-2 bg-primary text-white">
-              <h5>${engineer.getName()}</h5>
-              <h6><i class="fas fa-glasses"></i> Engineer</h6>
+              <h4>${engineer.getName()}</h4>
+              <h5><i class="fas fa-glasses"></i> Engineer</h5>
             </div>
             <div class="card bg-light m-3">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li class="list-group-item">GitHub: ${engineer.getGitHub()}</li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}/">${engineer.getGitHub()}</a></li>
               </ul>
             </div>
           </div>
         </div>
       </article>
     `;
-});
+    });
 
 
-team.interns.forEach(function(intern){
-    html += `
+    team.interns.forEach(function (intern) {
+        html += `
     <article class="col-md-4">
         <div id="card">
           <div class="card bg-light">
             <div class="card-header p-2 bg-primary text-white">
-              <h5>${intern.getName()}</h5>
-              <h6><i class="fas fa-user-graduate"></i> Intern</h6>
+              <h4>${intern.getName()}</h4>
+              <h5><i class="fas fa-user-graduate"></i> Intern</h5>
             </div>
             <div class="card bg-light m-3">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${intern.getId()}</li>
-                <li class="list-group-item">Email: ${intern.getEmail()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                 <li class="list-group-item">School: ${intern.getSchool()}</li>
               </ul>
             </div>
@@ -104,9 +104,9 @@ team.interns.forEach(function(intern){
       </article>
     </section>
     `;
-});
+    });
 
-return html;
+    return html;
 }
 
 

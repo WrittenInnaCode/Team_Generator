@@ -198,7 +198,7 @@ function createIntern() {
 }
 
 
-// create team after finished createManager()
+// reate team after finished createManager()
 function createTeam() {
     inquirer
         .prompt([
@@ -220,6 +220,7 @@ function createTeam() {
                     break;
                 default:
                     fs.writeFileSync('./dist/team.html', generateHTML({ managers, engineers, interns }));
+                    console.log("Your HTML file is ready in dist folder!");
                     return;
             }
         });
