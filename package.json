@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,6 @@
   "homepage": "https://github.com/WrittenInnaCode/Team_Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
-    "jest": "^29.0.2"
+    "jest": "^29.0.3"
   }
 }
