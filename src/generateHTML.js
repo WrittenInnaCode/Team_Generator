@@ -72,7 +72,7 @@ team.engineers.forEach(function(engineer){
             <div class="card bg-light m-3">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
                 <li class="list-group-item">GitHub: ${engineer.getGitHub()}</li>
               </ul>
             </div>

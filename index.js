@@ -21,22 +21,50 @@ function createManager() {
             {
                 type: 'input',
                 name: 'name',
-                message: 'What is the manager\'s name?'
+                message: 'What is the manager\'s name?',
+                validate: (answer) => {
+                    if (answer !== '') {
+                      return true;
+                    }
+                    return 'Please enter at least one character.';
+                  },
             },
             {
                 type: 'input',
                 name: 'id',
-                message: 'What is the manager\'s id?'
+                message: 'What is the manager\'s id?',
+                validate: (answer) => {
+                    const pass = answer.match(/^[1-9]\d*$/);
+                    if (pass) {
+                      return true;
+                    }
+                    return 'Please enter a number greater than zero.';
+                  },
             },
+        
             {
                 type: 'input',
                 name: 'email',
-                message: 'What is the manager\'s email?'
+                message: 'What is the manager\'s email?',
+                validate: (answer) => {
+                    const pass = answer.match(/\S+@\S+\.\S+/);
+                    if (pass) {
+                      return true;
+                    }
+                    return 'Please enter an email address.';
+                  },
             },
             {
                 type: 'input',
                 name: 'officeNumber',
-                message: 'What is the manager\'s office number?'
+                message: 'What is the manager\'s office number?',
+                validate: (answer) => {
+                    const pass = answer.match(/^[1-9]\d*$/);
+                    if (pass) {
+                      return true;
+                    }
+                    return 'Please enter a number greater than zero.';
+                  },
             },
 
         ]).then(function (answers) {
@@ -58,22 +86,48 @@ function createEngineer() {
             {
                 type: 'input',
                 name: 'name',
-                message: 'What is the engineer\'s name?'
+                message: 'What is the engineer\'s name?',
+                validate: (answer) => {
+                    if (answer !== '') {
+                      return true;
+                    }
+                    return 'Please enter at least one character.';
+                  },
             },
             {
                 type: 'input',
                 name: 'id',
-                message: 'What is the engineer\'s id?'
+                message: 'What is the engineer\'s id?',
+                validate: (answer) => {
+                    const pass = answer.match(/^[1-9]\d*$/);
+                    if (pass) {
+                      return true;
+                    }
+                    return 'Please enter a number greater than zero.';
+                  },
             },
             {
                 type: 'input',
                 name: 'email',
-                message: 'What is the engineer\'s email?'
+                message: 'What is the engineer\'s email?',
+                validate: (answer) => {
+                    const pass = answer.match(/\S+@\S+\.\S+/);
+                    if (pass) {
+                      return true;
+                    }
+                    return 'Please enter an email address.';
+                  },
             },
             {
                 type: 'input',
                 name: 'GitHub',
-                message: 'What is the engineer\'s GitHub uresname?'
+                message: 'What is the engineer\'s GitHub uresname?',
+                validate: (answer) => {
+                    if (answer !== '') {
+                      return true;
+                    }
+                    return 'Please enter at least one character.';
+                  },
             },
         ]).then(function(answers) {
             // console.log(answers);
@@ -91,22 +145,48 @@ function createIntern() {
             {
                 type: 'input',
                 name: 'name',
-                message: 'What is the intern\'s name?'
+                message: 'What is the intern\'s name?',
+                validate: (answer) => {
+                    if (answer !== '') {
+                      return true;
+                    }
+                    return 'Please enter at least one character.';
+                  },
             },
             {
                 type: 'input',
                 name: 'id',
-                message: 'What is the intern\'s id?'
+                message: 'What is the intern\'s id?',
+                validate: (answer) => {
+                    const pass = answer.match(/^[1-9]\d*$/);
+                    if (pass) {
+                      return true;
+                    }
+                    return 'Please enter a number greater than zero.';
+                  },
             },
             {
                 type: 'input',
                 name: 'email',
-                message: 'What is the intern\'s email?'
+                message: 'What is the intern\'s email?',
+                validate: (answer) => {
+                    const pass = answer.match(/\S+@\S+\.\S+/);
+                    if (pass) {
+                      return true;
+                    }
+                    return 'Please enter an email address.';
+                  },
             },
             {
                 type: 'input',
                 name: 'school',
-                message: 'What is the intern\'s school?'
+                message: 'What is the intern\'s school?',
+                validate: (answer) => {
+                    if (answer !== '') {
+                      return true;
+                    }
+                    return 'Please enter at least one character.';
+                  },
             },
         ]).then(function(answers) {
             // console.log(answers);
