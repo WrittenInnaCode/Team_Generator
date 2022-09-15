@@ -2,7 +2,7 @@
 
 💻 [The repo can be found here.](https://github.com/WrittenInnaCode/Team_Generator)
 
-📺 [The walkthrough video can be seen here.]( )
+📺 [The walkthrough video can be seen here.](https://drive.google.com/file/d/1cH1TXfoxr3lshCsMHWP3k2lzU_CL-cNZ/view)
 <br/><br/>
 
 ## Table of Contents:

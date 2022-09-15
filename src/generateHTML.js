@@ -13,7 +13,7 @@ const generateHTML = team => {
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
-  <title>Team Generator</title>
+  <title>My Dream Team</title>
 </head>
 
 <body>
@@ -73,7 +73,7 @@ const generateTeam = team => {
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}/">${engineer.getGitHub()}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}/" target="_blank">${engineer.getGitHub()}</a></li>
               </ul>
             </div>
           </div>
