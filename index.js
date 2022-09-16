@@ -198,7 +198,7 @@ function createIntern() {
 }
 
 
-// reate team after finished createManager()
+// Create team after finished createManager()
 function createTeam() {
     inquirer
         .prompt([
